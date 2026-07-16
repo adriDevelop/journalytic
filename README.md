@@ -2,7 +2,7 @@
 
 Bienvenido/a a la documentación de Journalityc.
 
-## ¿Qué es Journalityc?
+## ¿Qué es Journalytic?
 
 ¿Nunca has pensado en usar otra herramientas de analíticas, pero era demasiado tedioso el incorporarlo? Bueno pues eso se acabó con **Journalytic**.
 
@@ -34,24 +34,6 @@ Bueno, toda la aplicación va a estar en un contenedor de Docker, así que no te
 
 Eso sí, deberás tener ejecutado Docker en tu máquina, y si no lo tienes, puedes descargarlo desde [aquí](https://www.docker.com/products/docker-desktop/).
 
-## Instalación
 
-Para instalar Journalityc, lo primero que debes hacer es clonar el repositorio en tu máquina, para eso ejecuta el siguiente comando:
-
-```bash
-git clone https://github.com/adriDevelop/journalityc.git
-```
-
-Una vez clonado, entras dentro de la carpeta contenedora y ejecutas el siguiente comando para levantar la aplicación:
-
-```bash
-docker-compose up -d
-```
-
-Y si tienes docker instalado en tu sistema, la aplicación se levantará en el puerto 8080, así que para acceder a ella solo debes abrir tu navegador y entrar a la siguiente dirección:
-
-```bash
-http://localhost:8080
-```
 
 Y listo, ya podrás acceder a la aplicación y empezar a usarla.
