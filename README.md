@@ -1,4 +1,4 @@
-# Journalityc
+# Journalytic
 
 Bienvenido/a a la documentación de Journalityc.
 
