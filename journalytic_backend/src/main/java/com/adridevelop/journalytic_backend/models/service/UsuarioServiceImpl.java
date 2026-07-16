@@ -3,6 +3,7 @@ package com.adridevelop.journalytic_backend.models.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.adridevelop.journalytic_backend.exceptions.UsuarioNoEncontradoException;
@@ -12,8 +13,13 @@ import com.adridevelop.journalytic_backend.models.entities.Usuario;
 @Service
 public class UsuarioServiceImpl implements GeneralService<Usuario>{
 
+    private final PasswordEncoder passwordEncoder;
     @Autowired
     private UsuarioDAO usuarioDao;
+
+    UsuarioServiceImpl(PasswordEncoder passwordEncoder) {
+        this.passwordEncoder = passwordEncoder;
+    }
 
     @Override
     public List<Usuario> getAll() {
@@ -27,6 +33,9 @@ public class UsuarioServiceImpl implements GeneralService<Usuario>{
 
     @Override
     public Usuario save(Usuario element) {
+        if (!element.getPassword().startsWith("$2a")){
+            element.setPassword(passwordEncoder.encode(element.getPassword()));
+        }
         return this.usuarioDao.save(element);
     }
 
