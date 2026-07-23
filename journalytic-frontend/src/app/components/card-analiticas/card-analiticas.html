@@ -1,0 +1,11 @@
+<div class="w-132 h-52 bg-[#1E293B] rounded-xl">
+  @if (analitica()) {
+    <div class="flex flex-col h-full w-full justify-between p-4">
+      <h1 class="text-2xl">{{ analitica()?.titulo }}</h1>
+
+      <h1 class="text-4xl text-center">{{ analitica()?.numeroVisitas }}</h1>
+
+      <h1 class="text-2xl text-end">{{ analitica()?.subtitulo }}</h1>
+    </div>
+  }
+</div>

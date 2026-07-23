@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 @source "./src/**/*.{html,ts}";
-/* Configuración del tema para Tailwind v4 */
+
 @theme {
   --font-sans: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
@@ -12,6 +12,10 @@
 
   .button {
     @apply w-full bg-[#6366F1] rounded-xl p-2 cursor-pointer mt-2;
+  }
+
+  .section {
+    @apply flex justify-center h-screen text-white bg-[#0F172A];
   }
 }
 
